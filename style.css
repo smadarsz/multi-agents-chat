@@ -1,0 +1,115 @@
+/* Custom styles for the multi-agent discussion app */
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.participant-card {
+    transition: all 0.3s ease;
+}
+
+.participant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.message.user {
+    background-color: #e2e8f0;
+    text-align: right;
+}
+
+.message.agent {
+    background-color: #edf2f7;
+}
+
+.agent-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#discussion-area {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+#question-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#send-question {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Checkbox styles */
+.form-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+}
+
+.form-checkbox:checked::before {
+    position: absolute;
+    font: 13px/1 'Open Sans', sans-serif;
+    left: 11px;
+    top: 7px;
+    content: '\2713';
+    transform: rotate(0deg);
+}
+
+.form-checkbox:hover {
+    background-color: #f7f7f7;
+}
+
+.form-checkbox:checked {
+    background-color: #4299e1;
+}
+
+.form-checkbox:checked::before {
+    color: #fff;
+}
+
+/* API Key input styles */
+#api-key-input {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#submit-api-key {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-api-key:hover {
+    background-color: #3182ce;
+}

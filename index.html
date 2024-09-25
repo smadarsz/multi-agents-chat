@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דיון רב-סוכני</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen">
+    <div id="api-key-page" class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold text-white mb-8 text-center">ברוכים הבאים לדיון רב-סוכני</h1>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4">הזן את מפתח ה-API של OpenAI</h2>
+            <input type="password" id="api-key-input" class="w-full p-2 mb-4 border rounded" placeholder="הזן את מפתח ה-API שלך">
+            <button id="submit-api-key" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">המשך</button>
+        </div>
+    </div>
+
+    <div id="landing-page" class="container mx-auto p-8 hidden">
+        <h1 class="text-4xl font-bold text-white mb-8 text-center">בחר נושא ומשתתפים לדיון</h1>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4">בחר נושא לדיון ומשתתפים</h2>
+            <input type="text" id="topic-input" class="w-full p-2 mb-4 border rounded" placeholder="הזן נושא לדיון">
+            <div id="participants-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <!-- Participants will be dynamically added here -->
+            </div>
+            <button id="start-discussion" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">התחל דיון</button>
+        </div>
+    </div>
+
+    <div id="discussion-page" class="container mx-auto p-8 hidden">
+        <h1 id="discussion-topic" class="text-4xl font-bold text-white mb-8 text-center"></h1>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <div id="discussion-area" class="mb-4 max-h-96 overflow-y-auto">
+                <!-- Discussion messages will be dynamically added here -->
+            </div>
+            <div class="flex">
+                <input type="text" id="question-input" class="flex-grow p-2 border rounded-l" placeholder="הזן שאלה">
+                <button id="send-question" class="bg-green-500 text-white px-4 py-2 rounded-r hover:bg-green-600">שלח</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
